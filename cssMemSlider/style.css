@@ -6,3 +6,118 @@ body {
     background-color: blueviolet;
 }
 
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 70%;
+    max-width: 45rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+.mem-img-block {
+    display: none;
+    height: 75vh;
+}
+
+.mem-img {
+    border-radius: 6%;
+    width: 100%; 
+    height: 100%
+}
+
+.mems-bottom {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+.controllers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#controller_1,
+#controller_2,
+#controller_3,
+#controller_4,
+#controller_5 {
+    visibility: hidden;
+}
+
+.controller1,
+.controller2,
+.controller3,
+.controller4,
+.controller5 {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+   background-color: rgb(133, 37, 101);
+}
+
+.controller1:hover,
+.controller2:hover,
+.controller3:hover,
+.controller4:hover,
+.controller5:hover {
+    background-color: #fff;
+}
+
+#controller_1:checked ~ .mems-slider #slide_1,
+#controller_2:checked ~ .mems-slider #slide_2,
+#controller_3:checked ~ .mems-slider #slide_3,
+#controller_4:checked ~ .mems-slider #slide_4,
+#controller_5:checked ~ .mems-slider #slide_5 {
+    display: block;
+}
+
+#controller_1:checked ~ .mems-bottom .controllers .controller1,
+#controller_2:checked ~ .mems-bottom .controllers .controller2,
+#controller_3:checked ~ .mems-bottom .controllers .controller3,
+#controller_4:checked ~ .mems-bottom .controllers .controller4,
+#controller_5:checked ~ .mems-bottom .controllers .controller5 {
+    background-color: transparent;
+    border: 0.2rem solid #fff;
+}
+
+#controller_1:checked ~ .mems-bottom .mems-text #text_1,
+#controller_2:checked ~ .mems-bottom .mems-text #text_2,
+#controller_3:checked ~ .mems-bottom .mems-text #text_3,
+#controller_4:checked ~ .mems-bottom .mems-text #text_4,
+#controller_5:checked ~ .mems-bottom .mems-text #text_5 {
+    display: inline-block;
+}
+
+#text_1,
+#text_2,
+#text_3,
+#text_4,
+#text_5 {
+    display: none;
+}
+
+#text_1:target,
+#text_2:target,
+#text_3:target,
+#text_4:target,
+#text_5:target {
+    display: block;
+}
+
+.mems-bottom {
+    padding-top: 2rem;
+}
+.mems-text {
+    font-size: 2rem;
+    color: #fff;
+}
+

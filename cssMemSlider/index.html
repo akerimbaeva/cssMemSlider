@@ -8,41 +8,46 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="mems-img">
-            <div class="mem-img-block">
-                <img src="./assets/coffee.jpg" alt="">
+    <div class="main">
+        <div class="container">
+            <input type="radio" id="controller_1" name="radio" checked="checked">
+            <input type="radio" id="controller_2" name="radio">
+            <input type="radio" id="controller_3" name="radio">
+            <input type="radio" id="controller_4" name="radio">
+            <input type="radio" id="controller_5" name="radio"> 
+            <div class="mems-slider">
+                <div class="mem-img-block" id="slide_1">
+                    <img class="mem-img" src="./assets/coffee.jpg" alt="">
+                </div>
+                <div class="mem-img-block" id="slide_2">
+                    <img class="mem-img" src="./assets/feel-better.jpg" alt="">
+                </div>
+                <div class="mem-img-block" id="slide_3">
+                    <img class="mem-img" src="./assets/smile-its-monday.jpg" alt="">
+                </div>
+                <div class="mem-img-block" id="slide_4">
+                    <img class="mem-img" src="./assets/you-can-do.jpg" alt="">
+                </div>
+                <div class="mem-img-block" id="slide_5">
+                    <img class="mem-img" src="./assets/zoom-meetings.jpg" alt="">
+                </div>
             </div>
-            <div class="mem-img-block">
-                <img src="./assets/feel-better.jpg" alt="">
+            <div class="mems-bottom">
+                <div class="mems-text">
+                    <span id="text_1">I love coffee!!!</span>
+                    <span id="text_2">Feel better now!</span>
+                    <span id="text_3">Smile...It is Monday!!!</span>
+                    <span id="text_4">You can do it!!!</span>
+                    <span id="text_5">At the zoom meeting..</span>
+                </div>
+                <div class="controllers">
+                    <label class="controller1" for="controller_1"></label>
+                    <label class="controller2" for="controller_2"></label>
+                    <label class="controller3" for="controller_3"></label>
+                    <label class="controller4" for="controller_4"></label>
+                    <label class="controller5" for="controller_5"></label>
+                </div>
             </div>
-            <div class="mem-img-block">
-                <img src="" alt="">
-            </div>
-            <div class="mem-img-block">
-                <img src="./assets/smile-its-monday.jpg" alt="">
-            </div>
-            <div class="mem-img-block">
-                <img src="./assets/you-can-do.jpg" alt="">
-            </div>
-            <div class="mem-img-block">
-                <img src="./assets/zoom-meetings.jpg" alt="">
-            </div>
-        </div>
-        <div class="mems-controls">
-            <input type="radio" id="1">
-            <input type="radio" id="2">
-            <input type="radio" id="3">
-            <input type="radio" id="4">
-            <input type="radio" id="5">
-        </div>
-        <div class="mems-text">
-            <span>I love coffee!!!</span>
-            <span>Feel better now!</span>
-            <span>Smile...It is Monday!!!</span>
-            <span>You can do it!!!</span>
-            <span>At the zoom meeting..</span>
-
         </div>
     </div>
     
