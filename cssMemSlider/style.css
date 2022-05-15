@@ -23,12 +23,14 @@ body {
 .mem-img-block {
     display: none;
     height: 75vh;
+    
 }
 
 .mem-img {
     border-radius: 6%;
     width: 100%; 
-    height: 100%
+    height: 100%;
+    margin: 0 auto;
 }
 
 .mems-bottom {
@@ -61,7 +63,7 @@ body {
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-   background-color: rgb(133, 37, 101);
+   background-color: rgb(89, 233, 221);
 }
 
 .controller1:hover,
@@ -78,6 +80,34 @@ body {
 #controller_4:checked ~ .mems-slider #slide_4,
 #controller_5:checked ~ .mems-slider #slide_5 {
     display: block;
+    animation: opac 9s;
+    -moz-animation: opac 9s; 
+    -webkit-animation: opac 9s; 
+}
+
+@keyframes opac {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes opac { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes opac { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 
 #controller_1:checked ~ .mems-bottom .controllers .controller1,
@@ -95,7 +125,16 @@ body {
 #controller_4:checked ~ .mems-bottom .mems-text #text_4,
 #controller_5:checked ~ .mems-bottom .mems-text #text_5 {
     display: inline-block;
+    animation-name: color;
+    animation-duration: 3s;
 }
+
+@keyframes color {
+    0%   {color: rgb(238, 71, 41);}
+    25%  {color: yellow;}
+    50%  {color: rgb(126, 243, 31);}
+    100% {color: rgb(54, 212, 240);}
+  }
 
 #text_1,
 #text_2,
