@@ -81,9 +81,9 @@ body {
 #controller_4:checked ~ .mems-slider #slide_4,
 #controller_5:checked ~ .mems-slider #slide_5 {
     display: block;
-    animation: opac 8s;
-    -moz-animation: opac 8s; 
-    -webkit-animation: opac 8s; 
+    animation: opac 4s;
+    -moz-animation: opac 4s; 
+    -webkit-animation: opac 4s; 
 }
 
 @keyframes opac {
