@@ -43,7 +43,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 0.7rem;
 }
 
 #controller_1,
@@ -60,11 +60,13 @@ body {
 .controller4,
 .controller5 {
     display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.8rem;
+    height: 2.8rem;
     border-radius: 50%;
     cursor: pointer;
-   background-color: rgb(89, 233, 221);
 }
 
 .controller1:hover,
@@ -72,8 +74,39 @@ body {
 .controller3:hover,
 .controller4:hover,
 .controller5:hover {
+   cursor: pointer;
+}
+
+.controller1:active,
+.controller2:active,
+.controller3:active,
+.controller4:active,
+.controller5:active {
+    transform: scale(0.75);
+}
+
+.inner1,
+.inner2,
+.inner3,
+.inner4,
+.inner5 {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: aqua;
+}
+
+.inner1:hover,
+.inner2:hover,
+.inner3:hover,
+.inner4:hover,
+.inner5:hover {
     background-color: #fff;
 }
+
+
 
 #controller_1:checked ~ .mems-slider #slide_1,
 #controller_2:checked ~ .mems-slider #slide_2,
@@ -111,11 +144,11 @@ body {
     }
 }
 
-#controller_1:checked ~ .mems-bottom .controllers .controller1,
-#controller_2:checked ~ .mems-bottom .controllers .controller2,
-#controller_3:checked ~ .mems-bottom .controllers .controller3,
-#controller_4:checked ~ .mems-bottom .controllers .controller4,
-#controller_5:checked ~ .mems-bottom .controllers .controller5 {
+#controller_1:checked ~ .mems-bottom .controllers .controller1 .inner1,
+#controller_2:checked ~ .mems-bottom .controllers .controller2 .inner2,
+#controller_3:checked ~ .mems-bottom .controllers .controller3 .inner3,
+#controller_4:checked ~ .mems-bottom .controllers .controller4 .inner4,
+#controller_5:checked ~ .mems-bottom .controllers .controller5 .inner5 {
     background-color: transparent;
     border: 0.2rem solid #fff;
 }
@@ -126,6 +159,9 @@ body {
 #controller_4:checked ~ .mems-bottom .mems-text #text_4,
 #controller_5:checked ~ .mems-bottom .mems-text #text_5 {
     display: inline-block;
+    animation: opac 4s;
+    -moz-animation: opac 4s; 
+    -webkit-animation: opac 4s; 
     animation-name: color;
     animation-duration: 3s;
 }
@@ -196,3 +232,20 @@ body {
     }
         
 }
+
+@media (max-width: 400px) {
+    .container {
+        width: 95%;
+        max-width: 37rem;
+    }
+
+    .controller1,
+    .controller2,
+    .controller3,
+    .controller4,
+    .controller5 {
+        margin-left: 0rem;
+    }
+
+}
+
