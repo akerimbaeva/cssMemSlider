@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blueviolet;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 70%;
+    max-width: 45rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+.mem-img-block {
+    display: none;
+    height: 75vh;
+    
+}
+
+.mem-img {
+    border-radius: 6%;
+    width: 100%; 
+    height: 100%;
+    margin: 0 auto;
+}
+
+.mems-bottom {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+.controllers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.7rem;
+}
+
+#controller_1,
+#controller_2,
+#controller_3,
+#controller_4,
+#controller_5 {
+    visibility: hidden;
+}
+
+.controller1,
+.controller2,
+.controller3,
+.controller4,
+.controller5 {
+    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.controller1:hover,
+.controller2:hover,
+.controller3:hover,
+.controller4:hover,
+.controller5:hover {
+   cursor: pointer;
+}
+
+.controller1:active,
+.controller2:active,
+.controller3:active,
+.controller4:active,
+.controller5:active {
+    transform: scale(0.75);
+}
+
+.inner1,
+.inner2,
+.inner3,
+.inner4,
+.inner5 {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: aqua;
+}
+
+.inner1:hover,
+.inner2:hover,
+.inner3:hover,
+.inner4:hover,
+.inner5:hover {
+    background-color: #fff;
+}
+
+
+
+#controller_1:checked ~ .mems-slider #slide_1,
+#controller_2:checked ~ .mems-slider #slide_2,
+#controller_3:checked ~ .mems-slider #slide_3,
+#controller_4:checked ~ .mems-slider #slide_4,
+#controller_5:checked ~ .mems-slider #slide_5 {
+    display: block;
+    animation: opac 4s;
+    -moz-animation: opac 4s; 
+    -webkit-animation: opac 4s; 
+}
+
+@keyframes opac {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes opac { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes opac { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+#controller_1:checked ~ .mems-bottom .controllers .controller1 .inner1,
+#controller_2:checked ~ .mems-bottom .controllers .controller2 .inner2,
+#controller_3:checked ~ .mems-bottom .controllers .controller3 .inner3,
+#controller_4:checked ~ .mems-bottom .controllers .controller4 .inner4,
+#controller_5:checked ~ .mems-bottom .controllers .controller5 .inner5 {
+    background-color: transparent;
+    border: 0.2rem solid #fff;
+}
+
+#controller_1:checked ~ .mems-bottom .mems-text #text_1,
+#controller_2:checked ~ .mems-bottom .mems-text #text_2,
+#controller_3:checked ~ .mems-bottom .mems-text #text_3,
+#controller_4:checked ~ .mems-bottom .mems-text #text_4,
+#controller_5:checked ~ .mems-bottom .mems-text #text_5 {
+    display: inline-block;
+    animation: opac 4s;
+    -moz-animation: opac 4s; 
+    -webkit-animation: opac 4s; 
+    animation-name: color;
+    animation-duration: 3s;
+}
+
+@keyframes color {
+    0%   {color: rgb(238, 71, 41);}
+    25%  {color: yellow;}
+    50%  {color: rgb(126, 243, 31);}
+    100% {color: rgb(54, 212, 240);}
+  }
+
+#text_1,
+#text_2,
+#text_3,
+#text_4,
+#text_5 {
+    display: none;
+}
+
+#text_1:target,
+#text_2:target,
+#text_3:target,
+#text_4:target,
+#text_5:target {
+    display: block;
+}
+
+.mems-bottom {
+    padding-top: 2rem;
+}
+.mems-text {
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+@media (max-width: 680px) {
+    .container {
+        width: 85%;
+        max-width: 37rem;
+    }
+
+    .mem-img-block {
+        height: 65vh;
+        padding-top: 10vh;
+    }
+
+    .mems-bottom {
+        flex-direction: column-reverse;
+    }
+
+    .controllers {
+        display: block;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+    .controller1,
+    .controller2,
+    .controller3,
+    .controller4,
+    .controller5 {
+        margin-left: 1rem;
+    }
+
+    .mems-text {
+        padding-bottom: 5rem;
+    }
+        
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 95%;
+        max-width: 37rem;
+    }
+
+    .controller1,
+    .controller2,
+    .controller3,
+    .controller4,
+    .controller5 {
+        margin-left: 0rem;
+    }
+
+}
+

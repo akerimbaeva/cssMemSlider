@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemSlider</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <input type="radio" id="controller_1" name="radio" checked="checked">
+            <input type="radio" id="controller_2" name="radio">
+            <input type="radio" id="controller_3" name="radio">
+            <input type="radio" id="controller_4" name="radio">
+            <input type="radio" id="controller_5" name="radio"> 
+            <div class="mems-slider">
+                <div class="mem-img-block" id="slide_1">
+                    <img class="mem-img" src="./assets/coffee.jpg" alt="">
+                </div>
+                <div class="mem-img-block" id="slide_2">
+                    <img class="mem-img" src="./assets/genius-meme.jpg" alt="">
+                </div>
+                <div class="mem-img-block" id="slide_3">
+                    <img class="mem-img" src="./assets/smile-its-monday.jpg" alt="">
+                </div>
+                <div class="mem-img-block" id="slide_4">
+                    <img class="mem-img" src="./assets/you-can-do.jpg" alt="">
+                </div>
+                <div class="mem-img-block" id="slide_5">
+                    <img class="mem-img" src="./assets/zoom-meetings.jpg" alt="">
+                </div>
+            </div>
+            <div class="mems-bottom">
+                <div class="mems-text">
+                    <span id="text_1">I love coffee!!!</span>
+                    <span id="text_2">He is genius!</span>
+                    <span id="text_3">Smile...It is Monday!!!</span>
+                    <span id="text_4">You can do it!!!</span>
+                    <span id="text_5">At the zoom meeting..</span>
+                </div>
+                <div class="controllers">
+                    <label for="controller_1">
+                        <div class="controller1"><span class="inner1"></span></div>
+                    </label>
+                    <label for="controller_2">
+                        <div class="controller2"><span class="inner2"></span></div>
+                    </label>
+                    <label for="controller_3">
+                        <div class="controller3"><span class="inner3"></span></div>
+                    </label>
+                    <label for="controller_4">
+                        <div class="controller4"><span class="inner4"></span></div>
+                    </label>
+                    <label for="controller_5">
+                        <div class="controller5"><span class="inner5"></span></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
